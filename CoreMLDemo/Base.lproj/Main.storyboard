@@ -144,7 +144,7 @@
                                 <segue destination="0Q6-yl-IoL" kind="show" id="F8N-hq-Ofl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Library" id="tWl-Bi-Khg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="tWl-Bi-Khg">
                             <connections>
                                 <action selector="openLibrary:" destination="PC9-qo-bOW" id="W5V-6Y-itu"/>
                             </connections>

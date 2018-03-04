@@ -64,13 +64,13 @@
 		AD83504E204C7CDA00949878 /* CoreMLDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AD835061204C7E4200949878 /* Inceptionv3.mlmodel */,
 				AD83504F204C7CDA00949878 /* AppDelegate.swift */,
 				AD83506A204C86A200949878 /* MainViewController.swift */,
 				AD835051204C7CDA00949878 /* CameraViewController.swift */,
 				AD835063204C7FB900949878 /* VideoCapture */,
 				AD835053204C7CDA00949878 /* Main.storyboard */,
 				AD835056204C7CDA00949878 /* Assets.xcassets */,
+				AD835061204C7E4200949878 /* Inceptionv3.mlmodel */,
 				AD835058204C7CDA00949878 /* LaunchScreen.storyboard */,
 				AD83505B204C7CDA00949878 /* Info.plist */,
 			);
