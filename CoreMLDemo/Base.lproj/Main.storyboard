@@ -17,7 +17,7 @@
         <!--View Controller-->
         <scene sceneID="Rlb-Uc-KmD">
             <objects>
-                <viewController id="0Q6-yl-IoL" customClass="ViewController" customModule="CoreMLSample" sceneMemberID="viewController">
+                <viewController id="0Q6-yl-IoL" customClass="ViewController" customModule="CoreMLDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iyh-rI-pit"/>
                         <viewControllerLayoutGuide type="bottom" id="JhB-Vy-wd5"/>
