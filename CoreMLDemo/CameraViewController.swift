@@ -10,7 +10,7 @@ import UIKit
 import CoreMedia
 import Vision
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate {
     
     // Outlets to label and view
     @IBOutlet private weak var predictLabel: UILabel!

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Q6-yl-IoL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dlb-qF-cnR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="Rlb-Uc-KmD">
             <objects>
-                <viewController id="0Q6-yl-IoL" customClass="ViewController" customModule="CoreMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Q6-yl-IoL" customClass="CameraViewController" customModule="CoreMLDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iyh-rI-pit"/>
                         <viewControllerLayoutGuide type="bottom" id="JhB-Vy-wd5"/>
@@ -27,13 +29,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xw-v5-kpU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPb-dX-yRf">
-                                        <rect key="frame" x="318" y="553" width="51" height="31"/>
+                                        <rect key="frame" x="318" y="509" width="51" height="31"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vision" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trA-Bz-Mzc">
-                                        <rect key="frame" x="263.5" y="558" width="46.5" height="21"/>
+                                        <rect key="frame" x="263.5" y="514" width="46.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46.5" id="hhs-7p-sEk"/>
                                             <constraint firstAttribute="height" constant="21" id="qKn-n0-EIE"/>
@@ -95,7 +97,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGj-u4-Oht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="-57.121439280359823"/>
+            <point key="canvasLocation" x="1644" y="170"/>
+        </scene>
+        <!--Core ML-->
+        <scene sceneID="ipG-si-KAP">
+            <objects>
+                <viewController id="PC9-qo-bOW" customClass="MainViewController" customModule="CoreMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JYz-MP-KLk"/>
+                        <viewControllerLayoutGuide type="bottom" id="tBd-yB-L8s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VG2-LU-OxD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w88-jA-od3">
+                                <rect key="frame" x="38" y="184" width="299" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w88-jA-od3" secondAttribute="height" multiplier="1:1" id="yPo-Hf-ICg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an image..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="bcZ-Bp-gLf">
+                                <rect key="frame" x="16" y="523" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dat-eV-gdj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bcZ-Bp-gLf" firstAttribute="top" secondItem="w88-jA-od3" secondAttribute="bottom" constant="40" id="Mbq-GB-Dln"/>
+                            <constraint firstItem="bcZ-Bp-gLf" firstAttribute="trailing" secondItem="VG2-LU-OxD" secondAttribute="trailingMargin" id="bTF-mq-Enh"/>
+                            <constraint firstItem="bcZ-Bp-gLf" firstAttribute="leading" secondItem="VG2-LU-OxD" secondAttribute="leadingMargin" id="g6j-9N-QMZ"/>
+                            <constraint firstItem="w88-jA-od3" firstAttribute="leading" secondItem="VG2-LU-OxD" secondAttribute="leading" constant="38" id="iDG-Kq-tpR"/>
+                            <constraint firstItem="w88-jA-od3" firstAttribute="centerX" secondItem="VG2-LU-OxD" secondAttribute="centerX" id="mKi-5g-km7"/>
+                            <constraint firstItem="w88-jA-od3" firstAttribute="centerY" secondItem="VG2-LU-OxD" secondAttribute="centerY" id="rjR-Uf-w3B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZLv-N5-v1c"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Core ML" id="D0N-k0-ZR1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="hrS-eO-6sc">
+                            <connections>
+                                <segue destination="0Q6-yl-IoL" kind="show" id="F8N-hq-Ofl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Library" id="tWl-Bi-Khg">
+                            <connections>
+                                <action selector="openLibrary:" destination="PC9-qo-bOW" id="W5V-6Y-itu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="classifier" destination="bcZ-Bp-gLf" id="nzm-G3-tO0"/>
+                        <outlet property="imageView" destination="w88-jA-od3" id="WwP-12-Ulb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TlP-WR-obP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829.60000000000002" y="169.56521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xCe-ey-M63">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dlb-qF-cnR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qgI-g3-6lI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PC9-qo-bOW" kind="relationship" relationship="rootViewController" id="IFS-sD-gky"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koU-mt-pcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="171"/>
         </scene>
     </scenes>
 </document>

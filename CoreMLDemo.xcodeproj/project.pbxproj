@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD835050204C7CDA00949878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83504F204C7CDA00949878 /* AppDelegate.swift */; };
-		AD835052204C7CDA00949878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD835051204C7CDA00949878 /* ViewController.swift */; };
+		AD835052204C7CDA00949878 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD835051204C7CDA00949878 /* CameraViewController.swift */; };
 		AD835055204C7CDA00949878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD835053204C7CDA00949878 /* Main.storyboard */; };
 		AD835057204C7CDA00949878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD835056204C7CDA00949878 /* Assets.xcassets */; };
 		AD83505A204C7CDA00949878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD835058204C7CDA00949878 /* LaunchScreen.storyboard */; };
@@ -16,12 +16,13 @@
 		AD835065204C801E00949878 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD835064204C801E00949878 /* VideoCapture.swift */; };
 		AD835067204C804D00949878 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD835066204C804D00949878 /* CameraType.swift */; };
 		AD835069204C80FD00949878 /* AVCaptureDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD835068204C80FD00949878 /* AVCaptureDeviceExtension.swift */; };
+		AD83506B204C86A200949878 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83506A204C86A200949878 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD83504C204C7CDA00949878 /* CoreMLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD83504F204C7CDA00949878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD835051204C7CDA00949878 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD835051204C7CDA00949878 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AD835054204C7CDA00949878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD835056204C7CDA00949878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD835059204C7CDA00949878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		AD835064204C801E00949878 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		AD835066204C804D00949878 /* CameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
 		AD835068204C80FD00949878 /* AVCaptureDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureDeviceExtension.swift; sourceTree = "<group>"; };
+		AD83506A204C86A200949878 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,11 @@
 		AD83504E204C7CDA00949878 /* CoreMLDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AD835063204C7FB900949878 /* VideoCapture */,
 				AD835061204C7E4200949878 /* Inceptionv3.mlmodel */,
 				AD83504F204C7CDA00949878 /* AppDelegate.swift */,
-				AD835051204C7CDA00949878 /* ViewController.swift */,
+				AD83506A204C86A200949878 /* MainViewController.swift */,
+				AD835051204C7CDA00949878 /* CameraViewController.swift */,
+				AD835063204C7FB900949878 /* VideoCapture */,
 				AD835053204C7CDA00949878 /* Main.storyboard */,
 				AD835056204C7CDA00949878 /* Assets.xcassets */,
 				AD835058204C7CDA00949878 /* LaunchScreen.storyboard */,
@@ -156,9 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD83506B204C86A200949878 /* MainViewController.swift in Sources */,
 				AD835065204C801E00949878 /* VideoCapture.swift in Sources */,
 				AD835067204C804D00949878 /* CameraType.swift in Sources */,
-				AD835052204C7CDA00949878 /* ViewController.swift in Sources */,
+				AD835052204C7CDA00949878 /* CameraViewController.swift in Sources */,
 				AD835069204C80FD00949878 /* AVCaptureDeviceExtension.swift in Sources */,
 				AD835062204C7E4200949878 /* Inceptionv3.mlmodel in Sources */,
 				AD835050204C7CDA00949878 /* AppDelegate.swift in Sources */,
