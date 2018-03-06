@@ -17,6 +17,7 @@
 		AD835067204C804D00949878 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD835066204C804D00949878 /* CameraType.swift */; };
 		AD835069204C80FD00949878 /* AVCaptureDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD835068204C80FD00949878 /* AVCaptureDeviceExtension.swift */; };
 		AD83506B204C86A200949878 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83506A204C86A200949878 /* MainViewController.swift */; };
+		ADCCAAE8204E95F300B1F3A0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCAAE7204E95F300B1F3A0 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AD835066204C804D00949878 /* CameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
 		AD835068204C80FD00949878 /* AVCaptureDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureDeviceExtension.swift; sourceTree = "<group>"; };
 		AD83506A204C86A200949878 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ADCCAAE7204E95F300B1F3A0 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD16E40F204E9640005DD7F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD835053204C7CDA00949878 /* Main.storyboard */,
+				AD835058204C7CDA00949878 /* LaunchScreen.storyboard */,
+				AD83506A204C86A200949878 /* MainViewController.swift */,
+				AD835051204C7CDA00949878 /* CameraViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD16E410204E9657005DD7F4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD835063204C7FB900949878 /* VideoCapture */,
+				ADCCAAE7204E95F300B1F3A0 /* UIImageExtension.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		AD835043204C7CDA00949878 = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +86,10 @@
 		AD83504E204C7CDA00949878 /* CoreMLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AD16E40F204E9640005DD7F4 /* ViewControllers */,
+				AD16E410204E9657005DD7F4 /* utils */,
+				ADCCAAE9204E95FE00B1F3A0 /* resources */,
 				AD83504F204C7CDA00949878 /* AppDelegate.swift */,
-				AD83506A204C86A200949878 /* MainViewController.swift */,
-				AD835051204C7CDA00949878 /* CameraViewController.swift */,
-				AD835063204C7FB900949878 /* VideoCapture */,
-				AD835053204C7CDA00949878 /* Main.storyboard */,
-				AD835056204C7CDA00949878 /* Assets.xcassets */,
-				AD835061204C7E4200949878 /* Inceptionv3.mlmodel */,
-				AD835058204C7CDA00949878 /* LaunchScreen.storyboard */,
 				AD83505B204C7CDA00949878 /* Info.plist */,
 			);
 			path = CoreMLDemo;
@@ -85,6 +103,15 @@
 				AD835068204C80FD00949878 /* AVCaptureDeviceExtension.swift */,
 			);
 			path = VideoCapture;
+			sourceTree = "<group>";
+		};
+		ADCCAAE9204E95FE00B1F3A0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD835056204C7CDA00949878 /* Assets.xcassets */,
+				AD835061204C7E4200949878 /* Inceptionv3.mlmodel */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +146,7 @@
 				TargetAttributes = {
 					AD83504B204C7CDA00949878 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -163,6 +190,7 @@
 				AD835065204C801E00949878 /* VideoCapture.swift in Sources */,
 				AD835067204C804D00949878 /* CameraType.swift in Sources */,
 				AD835052204C7CDA00949878 /* CameraViewController.swift in Sources */,
+				ADCCAAE8204E95F300B1F3A0 /* UIImageExtension.swift in Sources */,
 				AD835069204C80FD00949878 /* AVCaptureDeviceExtension.swift in Sources */,
 				AD835062204C7E4200949878 /* Inceptionv3.mlmodel in Sources */,
 				AD835050204C7CDA00949878 /* AppDelegate.swift in Sources */,
@@ -302,8 +330,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC7W275DZZ;
 				INFOPLIST_FILE = CoreMLDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -319,8 +348,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC7W275DZZ;
 				INFOPLIST_FILE = CoreMLDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
